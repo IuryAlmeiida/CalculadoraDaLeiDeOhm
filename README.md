@@ -17,7 +17,7 @@ A calculadora da Lei de Ohm possui as seguintes funcionalidades:
 1. Clone este repositório para o seu computador:
 
    ```
-   git clone https://github.com/seu-usuario/calculadora-lei-de-ohm.git](https://github.com/IuryAlmeiida/CalculadoraDaLeiDeOhm
+   git clone https://github.com/IuryAlmeiida/CalculadoraDaLeiDeOhm
    ```
 
 2. Abra o projeto em uma IDE de sua preferência, como o Code::Blocks.
