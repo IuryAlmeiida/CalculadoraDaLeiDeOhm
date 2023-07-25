@@ -12,6 +12,12 @@ A calculadora da Lei de Ohm possui as seguintes funcionalidades:
 
 3. Cálculo da corrente (I) - Dado o valor da resistência (R) e tensão (V), a calculadora pode determinar a corrente usando a fórmula I = V / R.
 
+4. Cálculo da resistência equivalente em série - Dado um conjunto de resistores em série, a calculadora pode determinar a resistência equivalente usando a fórmula R_eq = R_1 + R_2 + ... + R_n.
+
+5. Cálculo da resistência equivalente em paralelo - Dado um conjunto de resistores em paralelo, a calculadora pode determinar a resistência equivalente usando a fórmula 1/R_eq = 1/R_1 + 1/R_2 + ... + 1/R_n.
+
+6. Cálculo da resistência equivalente em circuito misto - Dado um conjunto de resistores em circuito misto (série e paralelo combinados), a calculadora pode determinar a resistência equivalente.
+
 ## Como usar
 
 1. Clone este repositório para o seu computador:
@@ -20,13 +26,14 @@ A calculadora da Lei de Ohm possui as seguintes funcionalidades:
    git clone https://github.com/IuryAlmeiida/CalculadoraDaLeiDeOhm
    ```
 
+
 2. Abra o projeto em uma IDE de sua preferência, como o Code::Blocks.
 
 3. Execute o projeto e a interface da calculadora será exibida.
 
 4. Insira os valores conhecidos (tensão, corrente ou resistência) nos campos apropriados.
 
-5. Selecione a grandeza que deseja calcular (resistência, tensão ou corrente) através dos botões de opção.
+5. Selecione a grandeza que deseja calcular (resistência, tensão, corrente ou resistência equivalente) através dos botões de opção.
 
 6. Clique no botão "Calcular" para obter o resultado.
 
@@ -49,4 +56,5 @@ Contribuições são bem-vindas! Se você encontrar algum problema, tiver alguma
 
 Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
-Espero que este README.md seja útil para apresentar o seu trabalho sobre a calculadora da Lei de Ohm. Lembre-se de personalizar o nome do repositório, o link de clone e outros detalhes conforme necessário. Boa sorte com o seu projeto!
+Espero que este README.md seja útil para apresentar o seu trabalho sobre a calculadora da Lei de Ohm. Lembre-se de personalizar o link de clone do repositório e outros detalhes conforme necessário. Boa sorte com o seu projeto!
+
