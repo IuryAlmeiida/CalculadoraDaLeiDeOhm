@@ -1,4 +1,16 @@
 #include "resistance_calculator.h"
+double calculate_voltage(double current, double resistance) {
+    return current * resistance;
+}
+
+double calculate_current(double voltage, double resistance) {
+    if (resistance != 0) {
+        return voltage / resistance;
+    } else {
+        printf("Erro: DivisÃ£o por zero na resistÃªncia (R).\n");
+        return -1;
+    }
+}
 
 double calculate_series_resistance(int n, double resistors[]) {
     double total_resistance = 0.0;
@@ -7,13 +19,20 @@ double calculate_series_resistance(int n, double resistors[]) {
     }
     return total_resistance;
 }
-
+double calculate_resistance(double voltage, double current) {
+    if (current != 0) {
+        return voltage / current;
+    } else {
+        printf("Erro: DivisÃ£o por zero na corrente (I).\n");
+        return -1;
+    }
+}
 
 double calculate_parallel_resistance(int n, double resistors[]) {
     double inv_total_resistance = 0.0;
     for (int i = 0; i < n; i++) {
         if (resistors[i] == 0) {
-            printf("Erro: Divisão por zero na resistência (R%d)\n", i + 1);
+            printf("Erro: Divisao por zero na resistencia (R%d)\n", i + 1);
             return -1;
         }
         inv_total_resistance += 1.0 / resistors[i];
@@ -31,14 +50,14 @@ double calculate_mixed_resistance(int n, double resistors[], char types[]) {
         double series_resistance = 0.0;
         double parallel_resistance = 0.0;
 
-        // Loop para calcular a resistência equivalente em série
+        // Loop para calcular a resistencia equivalente em serie
         while (i < n && types[i] == 'S') {
             series_resistance += resistors[i];
             count_series++;
             i++;
         }
 
-        // Loop para calcular a resistência equivalente em paralelo
+        // Loop para calcular a resistencia equivalente em paralelo
         while (i < n && types[i] == 'P') {
             parallel_resistance += resistors[i];
             count_parallel++;
@@ -46,12 +65,12 @@ double calculate_mixed_resistance(int n, double resistors[], char types[]) {
         }
 
         if (count_series > 0) {
-            // Caso haja resistores em série, adiciona a resistência equivalente em série ao total
+            // Caso haja resistores em serie, adiciona a resistencia equivalente em serie ao total
             total_resistance += calculate_series_resistance(count_series, &resistors[i - count_series]);
         }
 
         if (count_parallel > 0) {
-            // Caso haja resistores em paralelo, adiciona a resistência equivalente em paralelo ao total
+            // Caso haja resistores em paralelo, adiciona a resistencia equivalente em paralelo ao total
             total_resistance += calculate_parallel_resistance(count_parallel, &resistors[i - count_parallel]);
         }
     }
