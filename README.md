@@ -56,7 +56,6 @@ Contribuições são bem-vindas! Se você encontrar algum problema, tiver alguma
 
 Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
-Espero que este README.md seja útil para apresentar o seu trabalho sobre a calculadora da Lei de Ohm. Lembre-se de personalizar o link de clone do repositório e outros detalhes conforme necessário. Boa sorte com o seu projeto!
 
 Desenvolvido por Iury Almeida :speak_no_evil:
 
