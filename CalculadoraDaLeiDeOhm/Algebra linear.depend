@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1690251653 source:c:\users\canetaazul\desktop\algebra linear\algebra linear\main.c
+	<stdio.h>
+	"resistance_calculator.h"
+
+1690252021 c:\users\canetaazul\desktop\algebra linear\algebra linear\resistance_calculator.h
+
+1690251593 source:c:\users\canetaazul\desktop\algebra linear\algebra linear\resistance_calculator.c
+	"resistance_calculator.h"
+
+1690250443 c:\users\canetaazul\desktop\algebra linear\algebra linear\resistance_calculator.c
+	"resistance_calculator.h"
+
