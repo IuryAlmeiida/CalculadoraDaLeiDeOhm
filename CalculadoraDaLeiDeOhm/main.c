@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include "resistance_calculator.h"
 
-
-
-
 int main() {
     int choice, num_resistors;
 
@@ -12,7 +9,10 @@ int main() {
     printf("1. Calcular a resistencia equivalente em serie\n");
     printf("2. Calcular a resistencia equivalente em paralelo\n");
     printf("3. Calcular a resistencia equivalente em misto\n");
-    printf("Digite o numero da opçao desejada: ");
+    printf("4. Calcular a tensao usando a Lei de Ohm\n");
+    printf("5. Calcular a corrente usando a Lei de Ohm\n");
+    printf("6. Calcular a resistencia usando a Lei de Ohm\n");
+    printf("Digite o numero da opcao desejada: ");
     scanf("%d", &choice);
 
     if (choice == 1 || choice == 2 || choice == 3) {
@@ -34,22 +34,54 @@ int main() {
         switch (choice) {
             case 1:
                 resistance = calculate_series_resistance(num_resistors, resistors);
-                printf("Resistência Equivalente em Série: %.2lf Ohms\n", resistance);
+                printf("Resistencia Equivalente em Serie: %.2lf Ohms\n", resistance);
                 break;
             case 2:
                 resistance = calculate_parallel_resistance(num_resistors, resistors);
-                printf("Resistência Equivalente em Paralelo: %.2lf Ohms\n", resistance);
+                printf("Resistencia Equivalente em Paralelo: %.2lf Ohms\n", resistance);
                 break;
             case 3:
                 resistance = calculate_mixed_resistance(num_resistors, resistors, types);
-                printf("Resistência Equivalente em Misto: %.2lf Ohms\n", resistance);
+                printf("Resistencia Equivalente em Misto: %.2lf Ohms\n", resistance);
                 break;
             default:
-                printf("Opção inválida!\n");
+                printf("Opcao invalida!\n");
                 break;
-        }
+        } } else if (choice == 4) {
+        // CÃ¡lculo da tensÃ£o usando a Lei de Ohm
+        double current, resistance;
+        printf("Digite o valor da corrente (I) em Amperes: ");
+        scanf("%lf", &current);
+        printf("Digite o valor da resistencia (R) em Ohms: ");
+        scanf("%lf", &resistance);
+
+        double voltage = calculate_voltage(current, resistance);
+        printf("Tensao (V) = %.2lf Volts\n", voltage);
+
+    } else if (choice == 5) {
+        // CÃ¡lculo da corrente usando a Lei de Ohm
+        double voltage, resistance;
+        printf("Digite o valor da tensao (V) em Volts: ");
+        scanf("%lf", &voltage);
+        printf("Digite o valor da resistencia (R) em Ohms: ");
+        scanf("%lf", &resistance);
+
+        double current = calculate_current(voltage, resistance);
+        printf("Corrente (I) = %.2lf Amperes\n", current);
+
+    } else if (choice == 6) {
+        // CÃ¡lculo da resistÃªncia usando a Lei de Ohm
+        double voltage, current;
+        printf("Digite o valor da tensao (V) em Volts: ");
+        scanf("%lf", &voltage);
+        printf("Digite o valor da corrente (I) em Amperes: ");
+        scanf("%lf", &current);
+
+        double resistance = calculate_resistance(voltage, current);
+        printf("Resistencia (R) = %.2lf Ohms\n", resistance);
+
     } else {
-        printf("Opção inválida!\n");
+        printf("Opcao invalida!\n");
     }
 
     return 0;
